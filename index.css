@@ -1,0 +1,246 @@
+*
+{
+    margin:0px;
+    padding:0px;
+}
+header
+{
+    display:flex;
+    width:100%;
+    background-color: #4b4b4b;
+    height:50px;
+    padding:10px
+
+}
+
+.category-wrapper
+{
+    display: flex;
+    padding:10px;
+    background-color: #3d3d3d;
+    margin-left:50px;
+gap:10px;
+
+
+}
+.modal.hide
+{
+    display:none;
+}
+.category
+{
+    width:50px;
+    height:30px;
+    
+    cursor:pointer;
+    box-sizing: border-box;
+
+
+}
+.category:hover
+{
+border:3px solid white;
+}
+.action-wrapper
+{
+    display:flex;
+    margin-left:50px;
+   
+    background-color:  #3d3d3d;
+}
+.p1
+{
+    background-color: pink;
+}
+.p2
+{
+    background-color:greenyellow;
+
+}
+.p3
+{
+    background-color:lightblue;
+}
+.p4
+{
+    background-color: black
+
+}
+[data-priority="p1"]
+{
+    background-color: pink;
+}
+[data-priority="p2"]
+{
+    background-color:greenyellow;
+
+}
+[data-priority="p3"]
+{
+    background-color:lightblue;
+}
+[data-priority="p4"]
+{
+    background-color: black;
+}
+
+.action-wrapper .action
+{
+    width:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.action-wrapper .action:hover
+{
+background-color: green;
+}
+
+.action-wrapper .Delete.enabled
+{
+    color:red;
+
+  }
+/* modal */
+.modal
+{
+    background-color: #dfe4ea;
+    width:50%;
+    min-width:400px;
+    min-height:300px;
+    left:50%;
+    top:50%;
+    position: fixed;
+    transform: translate(-50% ,-50%);
+    display: flex;;
+
+}
+ .left-section
+{
+    flex-grow: 1;
+}
+.right-section
+{
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: space-between;
+    padding:10px;
+}
+.left-section textarea
+{
+    width:100%;
+    height:100%;
+    background-color: transparent;
+    border:none;
+    padding:10px;
+    box-sizing: border-box;
+}
+.right-section .category
+{
+width:100%;
+height:60px
+}
+
+/* taskwrapper */
+
+.tasks-wrapper
+{
+    display: block;
+}
+.tasks-wrapper .tasks{
+    display:inline-block;
+    width:200px;
+    height:150px;
+    padding:30px;
+    margin:5px;
+    position:relative;
+
+}
+.tasks-wrapper .tasks .task-category
+{
+    width:100%;
+    height:15px;
+    pointer-events: none;
+
+}
+.tasks-wrapper .tasks .task-id
+{
+    width:100%;
+    height:25px;
+    padding:5px;
+    background-color: yellow;
+    box-sizing: border-box;
+
+    
+}
+.tasks-wrapper .tasks .task-title
+{
+    width:100%;
+    height:100px;
+    background-color: orange;
+
+}
+.tasks-wrapper .tasks .task-title textarea
+{
+    height:100px;
+    width:100%;
+    background-color: orange;
+    pointer-events: none;
+}
+.right-section .category.selected
+{
+    border:3px solid red
+}
+
+.tasks-wrapper .tasks .task-delete-icon
+{
+    position:absolute;
+    right:33px;
+    bottom:43px;
+    cursor:pointer;
+    display:none
+}
+.tasks-wrapper .tasks.hide
+{
+    display:none
+}
+.tasks-wrapper[data-delete-disabled="false"] .tasks .task-delete-icon{
+    display:block;
+
+}
+
+
+/* .tasks-wrapper[data-delete-enabled="false"] .tasks .task-delete-icon{
+    display:none;
+
+} */
+/* textarea and category to enable to edit */
+.tasks-wrapper[data-delete-disabled="false"] .tasks textarea,
+.tasks-wrapper[data-delete-disabled="false"] .tasks .task-category
+{
+    pointer-events: all;
+
+}
+.task-search input
+{
+    margin-left:15px;
+    height:50px;
+    width:300px;
+    padding:0 10px;
+    font-size: 20px;
+}
+.task-title textarea{
+    resize: none;
+}
+/* .task-title
+{
+    resize: none;
+} */
+
